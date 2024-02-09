@@ -12,3 +12,4 @@
     - Wait for install
     - Install treesitter packages for syntax highlighting: `:TSInstall <language>`
 5. Change .desktop files to your username
+6. Run the AppImages in the `.local/bin` folders to ensure they get added to the system
