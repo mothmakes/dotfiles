@@ -44,6 +44,9 @@ ln -s ~/.local/bin/zotero/Zotero_linux-x86_64/zotero.desktop ~/.local/share/appl
 # tpm
 
 git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
+cd ~/.tmux/plugins/tpm/bin/ 
+./install_plugins
+cd ~/dotfiles/
 
 # NVChad
 
