@@ -55,3 +55,9 @@ gd_name="Godot_v$lv_godot-stable_linux.x86_64"
 unzip "$gd_name.zip"
 ln -s ./$gd_name "./godot.x86_64"
 rm "$gd_name.zip"
+
+# Obsidian
+cd ~/.local/bin/ 
+mkdir Obsidian
+cd Obsidian
+wget $(lastversion https://github.com/obsidianmd/obsidian-releases --assets --filter AppImage | tail -n 1)
