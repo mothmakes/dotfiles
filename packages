@@ -6,7 +6,6 @@ alacritty
 syncthing-gtk
 snapd
 code
-cargo
 libssl-dev
 speedtest-rs
 wiki-tui
