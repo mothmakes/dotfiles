@@ -40,3 +40,7 @@ ln -s ~/.local/bin/zotero/Zotero_linux-x86_64/zotero.desktop ~/.local/share/appl
 # tpm
 
 git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
+
+# NVChad
+
+git clone https://github.com/NvChad/NvChad ~/.config/nvim --depth 1
