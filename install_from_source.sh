@@ -44,3 +44,14 @@ git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
 # NVChad
 
 git clone https://github.com/NvChad/NvChad ~/.config/nvim --depth 1
+
+# Godot
+cd ~/.local/bin 
+mkdir Godot
+cd Godot
+wget $(lastversion godot --assets --filter x86_64 | head -n 1)
+lv_godot=$(lastversion godot)
+gd_name="Godot_v$lv_godot-stable_linux.x86_64"
+unzip "$gd_name.zip"
+ln -s ./$gd_name "./godot.x86_64"
+rm "$gd_name.zip"

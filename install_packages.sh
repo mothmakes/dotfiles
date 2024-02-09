@@ -1,7 +1,7 @@
 #!/bin/bash
 cd ~/dotfiles
 
-repos=$(cat ./packages)
+repos=$(cat ./repositories)
 
 for repo in $repos
 do

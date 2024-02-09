@@ -1,0 +1,8 @@
+[Desktop Entry]
+Name=Godot 4.x Engine
+Comment=An open source game engine.
+Exec=/home/mothwing/.local/bin/Godot/godot.x86_64
+Icon=/home/mothwing/.local/bin/Godot/godot_icon.svg
+Terminal=false
+Type=Application
+StartupNotify=true
