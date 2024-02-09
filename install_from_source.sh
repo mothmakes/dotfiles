@@ -1,5 +1,6 @@
 #!/bin/bash
-
+cd ~/.local/ 
+mkdir bin
 # llvm
 
 bash -c "$(wget -O - https://apt.llvm.org/llvm.sh)"

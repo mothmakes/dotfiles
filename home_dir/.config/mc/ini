@@ -87,7 +87,7 @@ skin=dark
 
 [Layout]
 output_lines=0
-left_panel_size=57
+left_panel_size=45
 top_panel_size=0
 message_visible=true
 keybar_visible=true
@@ -115,6 +115,8 @@ clipboard_paste=
 base_color=
 alacritty=
 color_terminals=
+
+screen-256color=
 
 [Panels]
 show_mini_info=true

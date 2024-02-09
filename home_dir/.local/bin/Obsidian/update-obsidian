@@ -1,0 +1,6 @@
+#!/bin/zsh
+cd ~/.local/bin/Obsidian
+filename="$(ls -t | grep Obsidian | head -n 1)"
+rm "$filename"
+wget $(lastversion https://github.com/obsidianmd/obsidian-releases --assets --filter AppImage | tail -n 1)
+

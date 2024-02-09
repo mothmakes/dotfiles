@@ -1,0 +1,12 @@
+#!/bin/zsh
+
+cd ~/.local/bin/Godot/ 
+rm godot.x86_64
+filename="$(ls -t | grep Godot_v | head -n 1)"
+rm  "$filename"
+wget $(lastversion godot --assets --filter x86_64 | head -n 1)
+lv_godot=$(lastversion godot)
+gd_name="Godot_v$lv_godot-stable_linux.x86_64"
+unzip "$gd_name.zip"
+ln -s ./$gd_name "./godot.x86_64"
+rm "$gd_name.zip"
