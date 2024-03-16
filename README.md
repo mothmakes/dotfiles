@@ -2,6 +2,10 @@
 
 ## Installation
 
+My new system runs NixOS, so I have swapped to using these configuration files.
+
+## Installation (Old)
+
 1. Run `install_packages.sh` as sudo
 2. Run `install_from_source.sh` as sudo
 3. Run `install_python_packages.sh`
