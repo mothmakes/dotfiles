@@ -113,6 +113,7 @@
       prismlauncher
       libsForQt5.kdenlive
       libsForQt5.plasma-browser-integration
+      libsForQt5.kdeconnect-kde
       qt6.qtwebengine
       starship
       tmux
@@ -120,7 +121,44 @@
       discord
       jellyfin-media-player
       gh
+      ludusavi
+      alacritty
+      eza
+      fzf
+      ripgrep
+      zoxide
+      mc
     ];
+
+    programs.git = {
+      enable = true;
+      userName = "Moth";
+      userEmail = "moth@mothmakes.website";
+    };
+
+    programs.zsh = {
+      enable = true;
+      autocd = true;
+      dotDir = ".config/zsh";
+      enableAutosuggestions = true;
+      enableCompletion = true;
+      shellAliases = {
+        ls = "exa";
+        ll="exa -alh";
+        tree="exa --tree";
+        search="rg";
+        ff="fzf";
+        vim="nvim";
+      };
+    };
+
+    programs.alacritty = {
+      enable = true;
+      settings = {
+        font.normal.family = "FiraCode Nerd Font";
+        font.size = 18.0;
+      };
+    };
 
     home.stateVersion = "24.05";
   };
@@ -131,6 +169,7 @@
     starship.enable = true;
     tmux.enable = true;
     zsh.enable = true;
+    kdeconnect.enable = true;
   };
 
   home-manager.useGlobalPkgs = true;
