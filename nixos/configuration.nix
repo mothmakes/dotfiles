@@ -13,7 +13,10 @@
 
   # Bootloader.
   boot.loader.systemd-boot.enable = true;
-  boot.loader.efi.canTouchEfiVariables = true;
+#   boot.loader.efi.canTouchEfiVariables = true;
+#   boot.loader.grub.enable = true;
+#   boot.loader.grub.device = "nodev";
+#   boot.loader.grub.useOSProber = true;
 
   networking.hostName = "mothwing"; # Define your hostname.
   # networking.wireless.enable = true;  # Enables wireless support via wpa_supplicant.
@@ -73,6 +76,9 @@
   # Enable CUPS to print documents.
   services.printing.enable = true;
 
+  # DISABLE SSH TEMPORARILY UNTIL XZ FIXED
+  services.openssh.openFirewall = false;
+
   # Enable sound with pipewire.
   sound.enable = true;
   hardware.pulseaudio.enable = false;
@@ -89,6 +95,9 @@
     # no need to redefine it in your config for now)
     #media-session.enable = true;
   };
+
+  hardware.bluetooth.enable = true; # enables support for Bluetooth
+  hardware.bluetooth.powerOnBoot = true; # powers up the default Bluetooth controller on boot
 
   # Enable touchpad support (enabled default in most desktopManager).
   # services.xserver.libinput.enable = true;
@@ -111,10 +120,11 @@
       obsidian
       git
       prismlauncher
-      libsForQt5.kdenlive
-      libsForQt5.plasma-browser-integration
-      libsForQt5.kdeconnect-kde
-      qt6.qtwebengine
+      kdePackages.kdenlive
+      kdePackages.plasma-browser-integration
+      kdePackages.kdeconnect-kde
+      kdePackages.kdeplasma-addons
+      kdePackages.qtwebengine
       starship
       tmux
       picard
@@ -128,6 +138,17 @@
       ripgrep
       zoxide
       mc
+      openjdk17
+      godot_4
+      steam-run
+      patchelf
+      itch
+      zotero
+      vmware-workstation
+      inkscape-with-extensions
+      google-fonts
+      heroic
+      github-desktop
     ];
 
     programs.git = {
@@ -163,6 +184,8 @@
     home.stateVersion = "24.05";
   };
 
+  virtualisation.vmware.host.enable = true;
+
   programs = {
     neovim.enable = true;
     steam.enable = true;
@@ -194,6 +217,7 @@
     jellyfin-web
     jellyfin-ffmpeg
     tailscale
+    libreoffice
   ];
   
   fonts.packages = with pkgs; [
