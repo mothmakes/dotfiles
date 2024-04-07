@@ -13,12 +13,8 @@
 
   # Bootloader.
   boot.loader.systemd-boot.enable = true;
-#   boot.loader.efi.canTouchEfiVariables = true;
-#   boot.loader.grub.enable = true;
-#   boot.loader.grub.device = "nodev";
-#   boot.loader.grub.useOSProber = true;
 
-  networking.hostName = "mothwing"; # Define your hostname.
+  networking.hostName = "mothlap"; # Define your hostname.
   # networking.wireless.enable = true;  # Enables wireless support via wpa_supplicant.
 
   # Configure network proxy if necessary
@@ -27,11 +23,6 @@
 
   # Enable networking
   networking.networkmanager.enable = true;
-
-  fileSystems."/run/media/mothmitcheson/Secondary" =
-  { device = "/dev/disk/by-label/Secondary";
-    fsType = "ext4";
-  };
 
   # Set your time zone.
   time.timeZone = "Europe/London";
@@ -75,9 +66,6 @@
 
   # Enable CUPS to print documents.
   services.printing.enable = true;
-
-  # DISABLE SSH TEMPORARILY UNTIL XZ FIXED
-  services.openssh.openFirewall = false;
 
   # Enable sound with pipewire.
   sound.enable = true;
@@ -142,7 +130,6 @@
       godot_4
       steam-run
       patchelf
-      itch
       zotero
       vmware-workstation
       inkscape-with-extensions
@@ -213,9 +200,6 @@
     ivpn
     ivpn-service
     perl538Packages.FileMimeInfo
-    jellyfin
-    jellyfin-web
-    jellyfin-ffmpeg
     tailscale
     libreoffice
   ];
@@ -224,7 +208,6 @@
     fira-code-nerdfont
   ];
 
-  services.jellyfin.enable = true;
   services.tailscale.enable = true;
   services.ivpn.enable = true;
 
