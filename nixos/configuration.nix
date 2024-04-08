@@ -136,6 +136,7 @@
       google-fonts
       heroic
       github-desktop
+      vscode
     ];
 
     programs.git = {
