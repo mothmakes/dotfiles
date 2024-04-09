@@ -137,6 +137,7 @@
       heroic
       github-desktop
       vscode
+      teams-for-linux
     ];
 
     programs.git = {
