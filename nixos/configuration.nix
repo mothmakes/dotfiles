@@ -150,6 +150,13 @@
       heroic
       github-desktop
       vscode
+      gimp
+      pandoc
+      texliveFull
+      krita
+      vlc
+      android-tools
+      subversionClient
     ];
 
     programs.git = {
@@ -219,10 +226,14 @@
     jellyfin-ffmpeg
     tailscale
     libreoffice
+    qbittorrent
+    subversion
   ];
   
   fonts.packages = with pkgs; [
     fira-code-nerdfont
+    roboto
+    roboto-slab
   ];
 
   services.jellyfin.enable = true;
